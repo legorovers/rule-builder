@@ -1,0 +1,95 @@
+.main {
+    text-align: left;
+    max-width: 600px;
+}
+body {
+    padding-right:0;
+}
+h1 {
+    margin-right: 0;
+}
+
+
+.opts {
+    float: left;
+    width: 65%;
+}
+
+.rule {
+    float: right;
+    width: 30%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 1px dotted #ccc;
+    background: #ccc;
+    min-height: 500px;
+}
+@media (max-width: 360px) {
+    .opts {
+        width: 60%;
+    }
+    .rule {
+        width: 35%;
+    }
+}
+
+ul, ol, li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.ico {
+    clear: both;
+    overflow: hidden;
+}
+.ico li, .ruleOpts  li {
+    display: block;
+}
+.ico li {
+    float: left;
+    width: auto;
+    margin: 0 10px 10px 0;
+    z-index:1000;
+}
+.ruleOpts li {
+    display: block;
+    margin-bottom: 10px;
+}
+.ruleOpts .ui-btn,
+.ruleOpts button {
+    width: 100%;
+    margin: 0 auto;
+}
+.ruleOpt .ui-btn-inner {
+    border: 2px solid #ccc;
+    border-radius: 1em;
+    background: white;
+    cursor: pointer;
+}
+.ruleOpts .ui-btn-inner {
+    border-width: 2px;
+    border-color: #333;
+}
+.ruleTarget .ui-btn-inner {
+    border-style: dashed;
+    border-radius: 1em;
+    padding: .6em;
+}
+button {
+    border-radius: 3px;
+}
+ul button, ol button {
+    font-size: 9px;
+    height: 60px;
+    width: 60px;
+}
+.save button, .save .btn {
+    width: 100%;
+    box-sizing: border-box;
+}
+.ui-dialog {
+    background:white !important;
+}
+div.ui-slider {
+    height: 10px;
+}
