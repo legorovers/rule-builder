@@ -1,0 +1,1 @@
+angular.module('legorover.rule-builder', ['legorover.rule-builder.controller', 'ngDragDrop']);
