@@ -15,6 +15,9 @@ angular.module('legorover.plan.controller', []).controller('planController', fun
     if (!$scope.plan.trigger) {
         $scope.plan.trigger = $scope.options.triggers[0];
     }
+    $scope.selectTrigger = function (trigger) {
+        $scope.plan.trigger = trigger;
+    };
     $scope.done = function () {
         return $location.path('/');
     };

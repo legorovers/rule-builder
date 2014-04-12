@@ -7,7 +7,14 @@
         <h3 class="panel-title">Trigger</h3>
     </div>
     <div class="panel-body">
-        <select ng-model="plan.trigger" ng-options="trigger.title for trigger in options.triggers"></select>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                {{ plan.trigger.title }} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="trigger in options.triggers" ng-click="selectTrigger(trigger)"><a>{{ trigger.title }}</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="row panel panel-default">
