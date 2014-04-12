@@ -1,7 +1,7 @@
 <h2>Plans</h2>
-<a class="btn btn-link" ng-href="#/plans/new">+ Add new plan</a>
+<a class="lead" ng-href="#/plans/new"><span class="glyphicon glyphicon-plus-sign"></span> Add new plan</a>
 <ul class="list-group">
-    <li class="list-group-item" ng-repeat="plan in plans.list">
+    <li ng-class="{'list-group-item-success': plan.active, 'inactive': !plan.active}" class="list-group-item" ng-repeat="plan in plans.list">
         {{ plan.title }}<div class="dropdown pull-right">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <span ng-show="!plan.active">Inactive</span><span ng-show="plan.active">Active</span> <span class="caret"></span>
