@@ -5,7 +5,7 @@ angular.module('legorover.plan.service', []).factory('planService', function () 
         var i, len;
         if (id) {
             for (i = 0, len = plans.length; i < len; i += 1) {
-                if (plans[i].id === id) {
+                if (plans[i].id === parseInt(id)) {
                     return plans[i];
                 }
             }
@@ -16,14 +16,16 @@ angular.module('legorover.plan.service', []).factory('planService', function () 
     function create() {
         var id = 1,
             newPlan = {
-                title: 'New plan'
+                title: 'New plan',
+                trigger: '',
+                actions: []
             };
         do {
             id += 1;
         } while (get(id));
         newPlan.id = id;
         plans.push(newPlan);
-        return newPlan;
+        return plans[plans.length - 1];
     }
     return {
         get: get,

@@ -10,7 +10,7 @@ angular.module('legorover.routes', ['ngRoute']).config(['$routeProvider',
                 templateUrl: 'templates/legorover.plan.template.html',
                 controller: 'planController'
             }).
-            when('/plans/:id', {
+            when('/plans/edit/:planID', {
                 templateUrl: 'templates/legorover.plan.template.html',
                 controller: 'planController'
             }).

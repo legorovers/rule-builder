@@ -2,9 +2,15 @@ angular.module('legorover.trigger.service', []).factory('triggerService', functi
     'use strict';
     function get() {
         return [
-            'obstacle',
-            'explosion',
-            'hole'
+            {
+                title: 'obstacle'
+            },
+            {
+                title: 'hole'
+            },
+            {
+                title: 'explosion'
+            }
         ];
     }
     return {

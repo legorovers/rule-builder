@@ -2,11 +2,18 @@ angular.module('legorover.action.service', []).factory('actionService', function
     'use strict';
     function get() {
         return [
-            'right',
-            'left',
-            'forward',
-            'back',
-            'stop'
+            {
+                title: 'left'
+            },
+            {
+                title: 'right'
+            },
+            {
+                title: 'forward'
+            },
+            {
+                title: 'back'
+            }
         ];
     }
     return {
