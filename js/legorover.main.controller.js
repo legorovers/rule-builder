@@ -3,4 +3,7 @@ angular.module('legorover.main.controller', []).controller('mainController', fun
     $scope.plans = {
         list: planService.get()
     };
+    $scope.deletePlan = function (id) {
+        planService.remove(id);
+    };
 });

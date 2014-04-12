@@ -27,8 +27,21 @@ angular.module('legorover.plan.service', []).factory('planService', function () 
         plans.push(newPlan);
         return plans[plans.length - 1];
     }
+    function remove(id) {
+        var plan, position;
+        plan = get(id);
+        if (plan) {
+            position = plans.indexOf(plan);
+            if (position > -1) {
+                plans.splice(position, 1);
+                return plan;
+            }
+        }
+        return;
+    }
     return {
         get: get,
-        create: create
+        create: create,
+        remove: remove
     };
 });

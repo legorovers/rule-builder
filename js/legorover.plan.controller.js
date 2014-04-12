@@ -1,15 +1,13 @@
 angular.module('legorover.plan.controller', []).controller('planController', function ($scope, $location, $routeParams, planService, triggerService, actionService) {
     'use strict';
-    console.log(planService.get());
     if ($routeParams.planID) {
         $scope.plan = planService.get($routeParams.planID);
         if (!$scope.plan) {
-            //return $location.path('/');
+            return $location.path('/');
         }
     } else {
         $scope.plan = planService.create();
     }
-    console.log($scope.plan);
     $scope.options = {
         triggers: triggerService.get(),
         actions: actionService.get()
