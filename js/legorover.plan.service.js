@@ -18,7 +18,8 @@ angular.module('legorover.plan.service', []).factory('planService', function () 
             newPlan = {
                 title: 'New plan',
                 trigger: '',
-                actions: []
+                actions: [],
+                active: true
             };
         do {
             id += 1;

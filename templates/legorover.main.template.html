@@ -1,5 +1,16 @@
-<h2>Manage plans</h2>
+<h2>Plans</h2>
 <a class="btn btn-link" ng-href="#/plans/new">+ Add new plan</a>
 <ul class="list-group">
-    <li class="list-group-item" ng-repeat="plan in plans.list">{{ plan.title }} <div class="pull-right"><a class="btn btn-link" ng-href="#/plans/edit/{{ plan.id }}">Edit</a><a class="btn btn-link" ng-click="deletePlan(plan.id)">Delete</a></div></li>
+    <li class="list-group-item" ng-repeat="plan in plans.list">
+        {{ plan.title }}<div class="dropdown pull-right">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span ng-show="!plan.active">Inactive</span><span ng-show="plan.active">Active</span> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="btn btn-link" ng-click="plan.active = !plan.active"><span ng-show="!plan.active">Activate</span><span ng-show="plan.active">Deactivate</span></a></li>
+                <li><a class="btn btn-link" ng-href="#/plans/edit/{{ plan.id }}">Edit</a></li>
+                <li><a class="btn btn-link" ng-click="deletePlan(plan.id)">Delete</a></li>
+            </ul>
+        </div>
+    </li>
 </ul>
