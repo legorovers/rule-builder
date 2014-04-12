@@ -1,0 +1,6 @@
+angular.module('legorover.main.controller', []).controller('mainController', function ($scope, $location, planService) {
+    'use strict';
+    $scope.plans = {
+        list: planService.get()
+    };
+});

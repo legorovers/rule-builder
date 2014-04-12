@@ -1,0 +1,24 @@
+<div id="events" class="row panel panel-default">
+    <div class="panel-body">
+        <div class="col-md-8">
+            <h3>Actions</h3>
+            <div>
+                <div class="btn btn-info btn-draggable" ng-repeat="item in options.actions" ng-model="options.actions" ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="m1" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">{{item.title}}</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">If..</h3>
+                </div>
+                <div class="panel-body">
+                    <ol class="list-group" data-drop="true" ng-model="goal.plans" jqyoui-droppable="{multiple:true}">
+                        <li class="btn btn-success btn-draggable list-group-item list-group-item-success" ng-repeat="item in goal.plans track by $index" ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="goal.plans" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</li>
+                        <li class="btn btn-default btn-draggable list-group-item">Add your items here</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-default" ng-click="done()">Done</div>
+    </div>
+</div>
