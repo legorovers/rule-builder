@@ -33,14 +33,12 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <ol class="list-group" data-drop="true" ng-model="plan.actions" jqyoui-droppable="{multiple:true}">
-                            <li class="list-group-item list-group-item-info" ng-repeat="item in plan.actions track by $index" ng-show="item.title" ng-model="plan.actions">{{item.title}}</li>
-                            <li class="list-group-item" ng-show="!plan.actions.length">Add your items here</li>
-                        </ol>
-                    </div>
-                </div>
+
+                        <div class="well" data-drop="true" ng-model="plan.actions" jqyoui-droppable="{multiple:true}">
+                            <div class="btn btn-info" ng-repeat="item in plan.actions track by $index" ng-show="item.title" ng-model="plan.actions">{{item.title}}</div>
+                            <div class="" ng-show="!plan.actions.length">Add your items here</div>
+                        </div>
+                    
             </div>
         </div>
     </div>
