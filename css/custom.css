@@ -13,3 +13,9 @@
 .icon-back:before {
     content: "\e094";
 }
+#actions .btn {
+    margin: 6px;
+}
+#actions-selected {
+    text-align: center;
+}
