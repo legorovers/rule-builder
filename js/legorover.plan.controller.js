@@ -21,4 +21,7 @@ angular.module('legorover.plan.controller', []).controller('planController', fun
     $scope.done = function () {
         return $location.path('/');
     };
+    $scope.className = function (name) {
+        return name.replace(' ', '-');
+    };
 });

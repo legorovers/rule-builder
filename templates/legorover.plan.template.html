@@ -29,12 +29,12 @@
         <div class="row">
             <div class="col-md-8">
                 <div>
-                    <div class="btn btn-default btn-draggable" ng-repeat="item in options.actions" ng-model="options.actions" ng-show="item.title" data-drag="true" data-jqyoui-options="{helper: 'clone'}" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}">{{item.title}}</div>
+                    <div class="btn btn-default btn-draggable" ng-repeat="item in options.actions" ng-model="options.actions" ng-show="item.title" data-drag="true" data-jqyoui-options="{helper: 'clone'}" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}"><span class="glyphicon icon-{{ className(item.title) }}"></span><span class="sr-only">{{item.title}}</span></div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="well" data-drop="true" ng-model="plan.actions" jqyoui-droppable="{multiple:true}">
-                    <div class="btn btn-info" ng-repeat="item in plan.actions track by $index" ng-show="item.title" ng-model="plan.actions">{{item.title}}</div>
+                    <div class="btn btn-info" ng-repeat="item in plan.actions track by $index" ng-show="item.title" ng-model="plan.actions"><span class="glyphicon icon-{{ className(item.title) }}"></span><span class="sr-only">{{item.title}}</span></div>
                     <div class="" ng-show="!plan.actions.length">Add your items here</div>
                 </div>
             </div>
