@@ -26,20 +26,20 @@
         <h3 class="panel-title">Actions</h3>
     </div>
     <div class="panel-body">
-        <div class="row">
-            <div class="col-md-10">
-                <div>
-                    <div class="btn btn-info btn-draggable" ng-repeat="item in options.actions" ng-model="options.actions" ng-show="item.title" data-drag="true" data-jqyoui-options="{helper: 'clone'}" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}"><span class="glyphicon icon-{{ className(item.title) }}"></span><span class="sr-only">{{item.title}}</span></div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div id="actions-selected" class="well" data-drop="true" ng-model="plan.actions" jqyoui-droppable="{multiple:true}">
-                    <div ng-repeat="item in plan.actions track by $index">
-                        <div class="btn btn-default" ng-show="item.title" ng-model="plan.actions"><span class="glyphicon icon-{{ className(item.title) }}"></span><span class="sr-only">{{item.title}}</span></div>
-                    </div>
-                    <div class="" ng-show="!plan.actions.length">Add your items here</div>
-                </div>
-            </div>
+        <div>
+            <div class="btn btn-info btn-draggable" ng-repeat="item in options.actions" ng-model="options.actions" ng-show="item.title" data-drag="true" data-jqyoui-options="{helper: 'clone'}" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}"><span class="glyphicon icon-{{ className(item.title) }}"></span><span class="sr-only">{{item.title}}</span></div>
+        </div>
+        <div id="actions-selected" class="well" data-drop="true" ng-model="plan.actions" jqyoui-droppable="{multiple:true}">
+            <span ng-repeat="item in plan.actions track by $index">
+                <span class="btn btn-info action-selected" ng-show="item.title" ng-model="plan.actions"><span class="glyphicon icon-{{ className(item.title) }}"></span><span class="sr-only">{{item.title}}</span></span> then
+            </span>
+
+            <span ng-show="!plan.actions.length">
+                <span class="btn action-placeholder"><span class="glyphicon glyphicon-plus"></span><span class="sr-only">ACTION</span></span> then
+            </span>
+            <span>
+                <span class="btn action-placeholder"><span class="glyphicon glyphicon-plus"></span><span class="sr-only">ACTION</span></span> then
+            </span>
         </div>
     </div>
 </div>

@@ -13,9 +13,12 @@
 .icon-back:before {
     content: "\e094";
 }
+.icon-stop:before {
+    content: "\e074";
+}
 #actions .btn {
     margin: 6px;
 }
-#actions-selected {
-    text-align: center;
+.action-placeholder {
+    border: 2px dotted #666;
 }

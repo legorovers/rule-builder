@@ -13,6 +13,9 @@ angular.module('legorover.action.service', []).factory('actionService', function
             },
             {
                 title: 'back'
+            },
+            {
+                title: "stop"
             }
         ];
     }
