@@ -1,6 +1,9 @@
-angular.module('legorover.plan.service', []).factory('planService', function () {
+angular.module('legorover.plan.service', []).factory('planService', function ($http) {
     'use strict';
     var plans = [];
+    function send() {
+        return $http.post('http://dev.dev', plans);
+    }
     function get(id) {
         var i, len;
         if (id) {
@@ -43,6 +46,7 @@ angular.module('legorover.plan.service', []).factory('planService', function () 
     return {
         get: get,
         create: create,
-        remove: remove
+        remove: remove,
+        send: send
     };
 });

@@ -6,4 +6,10 @@ angular.module('legorover.main.controller', []).controller('mainController', fun
     $scope.deletePlan = function (id) {
         planService.remove(id);
     };
+    $scope.sendPlans = function () {
+        $scope.sendingPlans = true;
+        planService.send().then(function () {
+            $scope.sendingPlans = false;
+        });
+    };
 });
