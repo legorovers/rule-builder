@@ -7,9 +7,9 @@
                 <span ng-show="!plan.active">Inactive</span><span ng-show="plan.active">Active</span> <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-                <li><a class="btn btn-link" ng-click="plan.active = !plan.active"><span ng-show="!plan.active">Activate</span><span ng-show="plan.active">Deactivate</span></a></li>
-                <li><a class="btn btn-link" ng-href="#/plans/edit/{{ plan.id }}">Edit</a></li>
-                <li><a class="btn btn-link" ng-click="deletePlan(plan.id)">Delete</a></li>
+                <li><a class="btn btn-link" ng-click="plan.active = !plan.active"><span ng-show="!plan.active"><span class="glyphicon glyphicon-ok-circle"></span> Activate</span><span ng-show="plan.active"><span class="glyphicon glyphicon-remove-circle"></span> Deactivate</span></a></li>
+                <li><a class="btn btn-link" ng-href="#/plans/edit/{{ plan.id }}"><span class="glyphicon glyphicon-pencil"></span> Edit</a></li>
+                <li><a class="btn btn-link" ng-click="deletePlan(plan.id)"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
             </ul>
         </div>
     </li>
